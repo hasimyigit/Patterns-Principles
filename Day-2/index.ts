@@ -17,7 +17,7 @@ const handlers = {
     // Complex Logic.
     return Promise.resolve({ name, description });
   },
-  create_invoice_status: (name: string, description: string) => {
+  change_invoice_status: (name: string, description: string) => {
     // Complex Logic.
     return Promise.resolve({ name, description });
   },
@@ -35,7 +35,7 @@ const createInvoiceController = async (payload: {
 
   await Promise.all([
     dispatch("create_invoice", payload.name, payload.description),
-    dispatch("create_invoice_status", payload.name, payload.description),
+    dispatch("change_invoice_status", payload.name, payload.description),
   ]);
 
   return await dispatch("send_emails", payload.name);
