@@ -23,7 +23,7 @@ export interface User {
   const USERS_MOCK: User[] = [
     USER_MOCK,
     { ...USER_MOCK, id: "1" },
-    { ...USER_MOCK, id: "1" },
+    { ...USER_MOCK, id: "2" },
   ];
 
   //Test file
